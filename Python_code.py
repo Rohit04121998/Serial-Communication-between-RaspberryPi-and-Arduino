@@ -4,7 +4,7 @@ import serial
 ser = serial.Serial("/dev/ttyACM0", 9600)
 
 while True:
-        c = raw_input("Enter the character you want to send: ")
+        c = input("Enter the character you want to send: ")
         char = c.encode()
         ser.write(char)
         time.sleep(0.05)
